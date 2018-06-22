@@ -1,0 +1,16 @@
+
+1st step: Go to      app/Providers/AppServiceProvider.php
+
+use Illuminate\Support\Facades\Schema; =use header position 
+     public function boot()
+     {
+         Schema::defaultStringLength(191);
+     }
+
+2nd step: config/Database.php
+
+'engine' => 'InnoDB ROW_FORMAT=DYNAMIC',
+
+after that hit the commend below the text
+
+CMD:  Php artisan migrate
